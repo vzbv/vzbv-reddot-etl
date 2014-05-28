@@ -2,7 +2,7 @@ imported=$(curl -L "${REMOTE_ENDPOINT}" | sort)
 
 project=vzbv
 
-types=(Forum "Eigene Studien" Forderungen Informationen Kurzmeldungen Themenschwerpunkt Umfrage Produkte)
+types=(meldung pm podcast urteil dokument vpk publikation)
 
 exported=$(find src/${project} -type f -iname "*.xml" | cut -d'/' -f 3 | cut -d'.' -f1 | sort)
 

@@ -39,3 +39,12 @@ terms=(meldung pm podcast urteil dokument vpk publikation)
 # Define how to call the File that contains all unmatched Types
 default_type="Dummy"
 ```
+
+# Custom Transformations (XSLT)
+
+For each defined Content Type you can place an `<content-type>.xsl` file within `xsl/<project-shortcode/`.
+After grouping all single files into content types, `xsltproc` is run if an `.xsl` file for a content type exists.
+
+# Validation
+
+After postprocessing `xmllint` is run against each final file which is then placed in `import/<project-shortcode>`
